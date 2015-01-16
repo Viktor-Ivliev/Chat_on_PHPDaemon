@@ -1,0 +1,12 @@
+{
+  "minimum-stability": "dev",
+  "require": {
+    "php": "5.4.*",
+    "kakserpom/phpdaemon": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "Chat\\": "src/"
+    }
+  }
+}

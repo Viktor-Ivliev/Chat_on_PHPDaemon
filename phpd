@@ -1,0 +1,7 @@
+#!/usr/bin/php
+<?php
+$configFile = __DIR__ . '/conf/phpd.conf';
+date_default_timezone_set('UTC');
+include(__DIR__. '/vendor/autoload.php');
+var_dump(class_exists('Chat\Application'));
+include(__DIR__ . '/vendor/bin/phpd');

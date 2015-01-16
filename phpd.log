@@ -1,0 +1,13 @@
+[Fri, 16 Jan 2015 12:29:24.483360 +0000] M#31505 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Fri, 16 Jan 2015 12:29:24.498946 +0000] M#31505 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Fri, 16 Jan 2015 12:29:24.579200 +0000] W#31509 \Chat\Application up.
+[Fri, 16 Jan 2015 12:29:24.583384 +0000] W#31508 \Chat\Application up.
+[Fri, 16 Jan 2015 12:32:54.633578 +0000] M#2536 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Fri, 16 Jan 2015 12:32:54.660358 +0000] M#2536 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Fri, 16 Jan 2015 12:32:54.765170 +0000] W#2538 \Chat\Application up.
+[Fri, 16 Jan 2015 12:32:54.773542 +0000] W#2539 \Chat\Application up.
+[Fri, 16 Jan 2015 12:38:59.287320 +0000] M#3049 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Fri, 16 Jan 2015 12:38:59.291903 +0000] M#3049 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Fri, 16 Jan 2015 12:38:59.345241 +0000] W#3054 \Chat\Application up.
+[Fri, 16 Jan 2015 12:38:59.345765 +0000] W#3052 \Chat\Application up.
+[Fri, 16 Jan 2015 12:39:05.147870 +0000] some data
