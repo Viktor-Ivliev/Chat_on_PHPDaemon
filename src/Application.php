@@ -16,11 +16,13 @@ class Application extends AppInstance
 	{
 
 		$appInstance = $this;
+		$ape = true;
 
 		//Метод timerTask() будет вызываться каждые 5 секунд
-        $this->timerTask($appInstance);
+		$this->timerTask($appInstance);
 
 		$wsServer = WebSocket\Pool::getInstance(); /* @var WebSocket\Pool $wsServer */
+
 		$wsServer->addRoute('chat', function ($client) {
 			$session=new WebSocketRoute($client, $appInstance); // Создаем сессию
             $session->id=uniqid(); // Назначаем ей уникальный ID
@@ -34,23 +36,24 @@ class Application extends AppInstance
         // Отправляем каждому клиенту свое сообщение
         $this->data = "";
     	foreach($this->sessions as $id=>$session) {
-    		if(isset($session->data))
+    		if($session->data != "")
     		{
-    			$this->data = $this->data."".$session->data.'<br/>';
-    			$session->data = null;
+    			$this->data = $this->data."".$session->data.'<br/>'. count($session->client).'<br/>';
+    			$session->data = "";
     		}
     	}
-    	//if($this->data!='')
-    	{
-	        foreach($this->sessions as $id=>$session) {
-	            $session->client->sendFrame('This is private message '.$this->data.' '.$id, 'STRING');
-	        }
-	    }
+    	if($this->data!='')
+    	 {
+	         foreach($this->sessions as $id=>$session) {
+	            $session->client->sendFrame('Личное '.$this->data.' для'.$id, 'STRING');
+	         }
+	     }
 
         
         // После отправляем всем клиентам сообщение от каждого воркера (широковещательный вызов)
-        //$appInstance->broadcastCall('sendBcMessage', array(\PHPDaemon\Core\Daemon::$process->getPid()));
-        
+	    
+       //$appInstance->broadcastCall('sendBcMessage', array(\PHPDaemon\Core\Daemon::$process->getPid()));
+
         // Перезапускаем наш метод спустя 5 секунд
         \PHPDaemon\Core\Timer::add(function($event) use ($appInstance) {
             $this->timerTask($appInstance);
@@ -58,22 +61,22 @@ class Application extends AppInstance
         }, 5e6); // Время задается в микросекундах
     }
     
-    // Функция для широковещательного вызова (при вызове срабатывает во всех воркерах)
-    public function sendBcMessage($pid) {
-    	$this->data = "";
-    	foreach($this->sessions as $id=>$session) {
-    		if(isset($session->data))
-    		{
-    			$this->data = $this->data."".$session->data.'<br/>';
-    			$session->data = null;
-    		}
-    	}
+   //  // Функция для широковещательного вызова (при вызове срабатывает во всех воркерах)
+   //  public function sendBcMessage($pid) {
+   //  	$this->data = "";
+   //  	foreach($this->sessions as $id=>$session) {
+   //  		if(isset($session->data))
+   //  		{
+   //  			$this->data = $this->data."".$session->data.'<br/>';
+   //  			$session->data = null;
+   //  		}
+   //  	}
 
-        foreach($this->sessions as $id=>$session) {
-			$session->client->sendFrame($this->data.'This message from worker #'.$pid.'<br/>', 'STRING');
-        }
-        $data = "";
-    }
+   // //      foreach($this->sessions as $id=>$session) {
+			// // $session->client->sendFrame('Воркер #'.$pid.'<span>'.$this->data.'</span><br/>', 'STRING');
+   // //      }
+   //      $this->data = "";
+   //  }
 
 
 }
