@@ -7,21 +7,18 @@ class WebSocketRoute extends Route
 	public $client;
     public $appInstance;
     public $id; // Здесь храним ID сессии
-    public $data = "";
 
 
     public function __construct($client,$appInstance) {
         $this->client=$client;
         $this->appInstance=$appInstance;
     }
-    //какая то странная идеффикация, работает и без нее но с ней не вываливается лишний ворнинг
- //    public function onHandshake() {
-	// }
 
 	public function onFrame($data, $type) {
-		
-        //$this->client->sendFrame('Server receive from client '.$this->id.' # message "'.$data.'"', 'STRING')
-        	$this->data = $data;
+
+        foreach($this->appInstance->sessions as $id=>$session) {
+            $session->client->sendFrame($data.'<br/>', 'STRING');
+        }
 	}
 
 	// Этот метод срабатывает при закрытии соединения клиентом
