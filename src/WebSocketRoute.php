@@ -15,9 +15,10 @@ class WebSocketRoute extends Route
     }
 
 	public function onFrame($data, $type) {
+        $data=json_decode($data);
 
         foreach($this->appInstance->sessions as $id=>$session) {
-            $session->client->sendFrame($data.'<br/>', 'STRING');
+            $session->client->sendFrame(json_encode($data), 'STRING');
         }
 	}
 

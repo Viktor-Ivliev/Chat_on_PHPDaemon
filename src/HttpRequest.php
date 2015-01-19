@@ -128,9 +128,12 @@ class HttpRequest extends Generic
 				<script type="text/javascript">
 					(function (w) {
 						// Example
-						ws = new WebSocket('ws://'+document.domain+':8090/chat');
+						window.ws = new WebSocket('ws://'+document.domain+':8090/chat');
 						ws.onopen = function () {document.getElementById('log').innerHTML = 'WebSocket opened <br/>'+document.getElementById('log').innerHTML;}
-						ws.onmessage = function (e) {document.getElementById('log').innerHTML = e.data+document.getElementById('log').innerHTML;}
+						ws.onmessage = function (e) {
+							var json = JSON.parse(e.data);
+							document.getElementById('log').innerHTML = '<b>'+json.name+' :</b><div class="mess"> '+json.message+'</div><br/>'+document.getElementById('log').innerHTML;}
+
 						ws.onclose = function () {document.getElementById('log').innerHTML = 'WebSocket closed <br/>'+document.getElementById('log').innerHTML;}
 						window.onbeforeunload = function (ws) {
 							ws.onclose();
@@ -138,9 +141,9 @@ class HttpRequest extends Generic
 					})(window);
 
 					function getName() {
-							var mess = '<b>'+document.forms["publish"].elements["name"].value+'</b> : '+document.forms["publish"].elements["message"].value;
+							var message = JSON.stringify({"name":document.forms["publish"].elements["name"].value,"message":document.forms["publish"].elements["message"].value});
 							document.forms["publish"].elements["message"].value = "";
-							return  mess;
+						    window.ws.send(message);
 					};
 
 					function showHide() {
@@ -166,7 +169,7 @@ class HttpRequest extends Generic
 					<form name="publish" method="post" >
 					  <label id="lab_message_id">Введите текст сообщения:</label>
 					  <textarea type="text" name="message" id="message_id"></textarea>
-					  <input class="btn" type="button" onclick="massage = getName(); ws.send(massage);" value="Отправить" id="message_button_id"/>
+					  <input class="btn" type="button" onclick="getName();" value="Отправить" id="message_button_id"/>
 					  <label id="lab_name_use_id">Введите ник:</label>
 					  <input type="text" name="name" id="name_use_id"/>
 					  <input class="btn" type="button" onclick="showHide();" value="Сохранить" id="name_use_button_id"/>
