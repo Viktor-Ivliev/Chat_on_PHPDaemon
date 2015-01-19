@@ -1,0 +1,3 @@
+[Mon, 19 Jan 2015 20:53:07.750805 +0000] M#14647 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 20:53:07.760292 +0000] M#14647 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 20:53:07.797977 +0000] W#14649 \Chat\Application up.
