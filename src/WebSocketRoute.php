@@ -14,19 +14,14 @@ class WebSocketRoute extends Route
         $this->client=$client;
         $this->appInstance=$appInstance;
     }
-    //какая то странная идификация, работает и без нее но с ней не вываливается лишний ворнинг
-    public function onHandshake() {
-	}
+    //какая то странная идеффикация, работает и без нее но с ней не вываливается лишний ворнинг
+ //    public function onHandshake() {
+	// }
 
 	public function onFrame($data, $type) {
 		
-        //$this->client->sendFrame('Server receive from client '.$this->id.' # message "'.$data.'"', 'STRING');
-        Daemon::log("111");
+        //$this->client->sendFrame('Server receive from client '.$this->id.' # message "'.$data.'"', 'STRING')
         	$this->data = $data;
-	}
-
-	public function handleException($e) {
-		$this->client->sendFrame('exception ...');
 	}
 
 	// Этот метод срабатывает при закрытии соединения клиентом

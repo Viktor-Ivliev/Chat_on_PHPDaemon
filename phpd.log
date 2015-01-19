@@ -18629,3 +18629,379 @@
 #7  PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
 #8  include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
 
+[Mon, 19 Jan 2015 08:58:31.608509 +0000] Spawning 2 worker(s)
+[Mon, 19 Jan 2015 08:58:32.953774 +0000] W#29713 \Chat\Application up.
+[Mon, 19 Jan 2015 08:58:32.956889 +0000] W#29712 \Chat\Application up.
+[Mon, 19 Jan 2015 08:58:34.227870 +0000] PHPDaemon\IPCManager\WorkerConnection: Socket error #111:Connection refused
+[Mon, 19 Jan 2015 08:58:34.234131 +0000] Attempt to write to dead IOStream (PHPDaemon\IPCManager\WorkerConnection)
+[Mon, 19 Jan 2015 08:58:34.258315 +0000] PHPDaemon\IPCManager\WorkerConnection: Socket error #111:Connection refused
+[Mon, 19 Jan 2015 08:58:34.260984 +0000] Attempt to write to dead IOStream (PHPDaemon\IPCManager\WorkerConnection)
+[Mon, 19 Jan 2015 11:02:16.921673 +0000] M#3623 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 11:02:16.971363 +0000] M#3623 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 11:02:17.119712 +0000] W#3628 \Chat\Application up.
+[Mon, 19 Jan 2015 11:02:17.125800 +0000] W#3629 \Chat\Application up.
+[Mon, 19 Jan 2015 11:02:17.132077 +0000] W#3632 \Chat\Application up.
+[Mon, 19 Jan 2015 11:02:17.134521 +0000] W#3627 \Chat\Application up.
+[Mon, 19 Jan 2015 11:02:43.990307 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:791]
+#8  PHPDaemon\Network\IOStream->onWriteEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:02:47.942861 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:03:03.574062 +0000] 111
+[Mon, 19 Jan 2015 11:03:09.977695 +0000] 111
+[Mon, 19 Jan 2015 11:03:16.061157 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:661]
+#4  PHPDaemon\Network\IOStream->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/WebSocket/ProtocolV13.php:167]
+#5  PHPDaemon\WebSocket\ProtocolV13->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:501]
+#6  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#7  PHPDaemon\Network\IOStream->onReadEv()
+#8  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#9  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#10 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#11 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:03:16.206406 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:03:24.353750 +0000] 111
+[Mon, 19 Jan 2015 11:03:31.639598 +0000] 111
+[Mon, 19 Jan 2015 11:03:35.657347 +0000] 111
+[Mon, 19 Jan 2015 11:05:25.742718 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:834]
+#4  PHPDaemon\Network\IOStream->onStateEv()
+#5  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#6  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#7  PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#8  include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:05:37.046424 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:834]
+#4  PHPDaemon\Network\IOStream->onStateEv()
+#5  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#6  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#7  PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#8  include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:11:06.289692 +0000] Spawning 2 worker(s)
+[Mon, 19 Jan 2015 11:11:06.310430 +0000] W#4942 \Chat\Application up.
+[Mon, 19 Jan 2015 11:11:06.311800 +0000] W#4941 \Chat\Application up.
+[Mon, 19 Jan 2015 11:11:07.324891 +0000] PHPDaemon\IPCManager\WorkerConnection: Socket error #111:Connection refused
+[Mon, 19 Jan 2015 11:11:07.325065 +0000] Attempt to write to dead IOStream (PHPDaemon\IPCManager\WorkerConnection)
+[Mon, 19 Jan 2015 11:11:07.335416 +0000] PHPDaemon\IPCManager\WorkerConnection: Socket error #111:Connection refused
+[Mon, 19 Jan 2015 11:11:07.335594 +0000] Attempt to write to dead IOStream (PHPDaemon\IPCManager\WorkerConnection)
+[Mon, 19 Jan 2015 11:48:47.947789 +0000] M#2302 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 11:48:48.052874 +0000] M#2302 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 11:48:48.163571 +0000] W#2305 \Chat\Application up.
+[Mon, 19 Jan 2015 11:48:48.166315 +0000] W#2306 \Chat\Application up.
+[Mon, 19 Jan 2015 11:48:48.175894 +0000] W#2308 \Chat\Application up.
+[Mon, 19 Jan 2015 11:48:48.182527 +0000] W#2307 \Chat\Application up.
+[Mon, 19 Jan 2015 11:49:33.012515 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:50:16.360255 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:50:19.970203 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:661]
+#4  PHPDaemon\Network\IOStream->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/WebSocket/ProtocolV13.php:167]
+#5  PHPDaemon\WebSocket\ProtocolV13->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:501]
+#6  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#7  PHPDaemon\Network\IOStream->onReadEv()
+#8  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#9  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#10 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#11 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:50:20.224841 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:50:36.479688 +0000] 111
+[Mon, 19 Jan 2015 11:50:58.111376 +0000] 111
+[Mon, 19 Jan 2015 11:51:11.018502 +0000] 111
+[Mon, 19 Jan 2015 11:51:31.419256 +0000] 111
+[Mon, 19 Jan 2015 11:51:45.615713 +0000] 111
+[Mon, 19 Jan 2015 11:52:12.085211 +0000] 111
+[Mon, 19 Jan 2015 11:52:45.571427 +0000] 111
+[Mon, 19 Jan 2015 11:52:53.837454 +0000] 111
+[Mon, 19 Jan 2015 11:53:07.363553 +0000] 111
+[Mon, 19 Jan 2015 11:53:30.369843 +0000] 111
+[Mon, 19 Jan 2015 11:54:01.403037 +0000] 111
+[Mon, 19 Jan 2015 11:54:11.321464 +0000] 111
+[Mon, 19 Jan 2015 11:54:29.167496 +0000] 111
+[Mon, 19 Jan 2015 11:55:23.003645 +0000] 111
+[Mon, 19 Jan 2015 11:56:05.744157 +0000] 111
+[Mon, 19 Jan 2015 11:56:44.363678 +0000] 111
+[Mon, 19 Jan 2015 11:56:56.589693 +0000] 111
+[Mon, 19 Jan 2015 11:57:07.350948 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 11:57:17.399699 +0000] 111
+[Mon, 19 Jan 2015 11:57:24.624127 +0000] 111
+[Mon, 19 Jan 2015 11:57:37.616991 +0000] 111
+[Mon, 19 Jan 2015 11:58:08.753868 +0000] 111
+[Mon, 19 Jan 2015 11:58:28.629270 +0000] 111
+[Mon, 19 Jan 2015 11:58:36.271053 +0000] 111
+[Mon, 19 Jan 2015 11:58:48.503401 +0000] 111
+[Mon, 19 Jan 2015 11:58:58.388405 +0000] 111
+[Mon, 19 Jan 2015 11:59:13.555772 +0000] 111
+[Mon, 19 Jan 2015 11:59:26.107666 +0000] 111
+[Mon, 19 Jan 2015 11:59:36.798935 +0000] 111
+[Mon, 19 Jan 2015 11:59:55.580534 +0000] 111
+[Mon, 19 Jan 2015 12:00:37.959780 +0000] 111
+[Mon, 19 Jan 2015 12:00:50.011178 +0000] 111
+[Mon, 19 Jan 2015 12:01:04.827076 +0000] 111
+[Mon, 19 Jan 2015 12:01:13.366361 +0000] 111
+[Mon, 19 Jan 2015 12:01:28.984308 +0000] 111
+[Mon, 19 Jan 2015 12:01:44.349827 +0000] 111
+[Mon, 19 Jan 2015 12:02:05.825012 +0000] 111
+[Mon, 19 Jan 2015 12:02:28.175214 +0000] 111
+[Mon, 19 Jan 2015 12:03:02.999384 +0000] 111
+[Mon, 19 Jan 2015 12:03:14.459042 +0000] 111
+[Mon, 19 Jan 2015 12:03:26.554903 +0000] 111
+[Mon, 19 Jan 2015 12:03:59.206624 +0000] 111
+[Mon, 19 Jan 2015 12:04:10.536365 +0000] 111
+[Mon, 19 Jan 2015 12:04:54.525339 +0000] 111
+[Mon, 19 Jan 2015 12:05:09.492988 +0000] 111
+[Mon, 19 Jan 2015 12:05:29.774011 +0000] 111
+[Mon, 19 Jan 2015 12:05:59.207377 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:834]
+#4  PHPDaemon\Network\IOStream->onStateEv()
+#5  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#6  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#7  PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#8  include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:06:08.553616 +0000] 111
+[Mon, 19 Jan 2015 12:06:53.475382 +0000] 111
+[Mon, 19 Jan 2015 12:07:10.961123 +0000] 111
+[Mon, 19 Jan 2015 12:07:18.298774 +0000] 111
+[Mon, 19 Jan 2015 12:07:38.082238 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:07:46.629994 +0000] 111
+[Mon, 19 Jan 2015 12:08:57.955162 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:661]
+#4  PHPDaemon\Network\IOStream->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Pool.php:270]
+#5  PHPDaemon\Network\Pool->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Server.php:46]
+#6  PHPDaemon\Network\Server->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Pool.php:240]
+#7  PHPDaemon\Network\Pool->onShutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Core/Pool.php:97]
+#8  PHPDaemon\Core\Pool->onShutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Core/AppInstance.php:297]
+#9  PHPDaemon\Core\AppInstance->handleStatus() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:545]
+#10 PHPDaemon\Thread\Worker->appInstancesReloadReady() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:592]
+#11 PHPDaemon\Thread\Worker->shutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:258]
+#12 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#13 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#14 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:08:57.961904 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:661]
+#4  PHPDaemon\Network\IOStream->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Pool.php:270]
+#5  PHPDaemon\Network\Pool->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Server.php:46]
+#6  PHPDaemon\Network\Server->finish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/Pool.php:240]
+#7  PHPDaemon\Network\Pool->onShutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Core/Pool.php:97]
+#8  PHPDaemon\Core\Pool->onShutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Core/AppInstance.php:297]
+#9  PHPDaemon\Core\AppInstance->handleStatus() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:545]
+#10 PHPDaemon\Thread\Worker->appInstancesReloadReady() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:592]
+#11 PHPDaemon\Thread\Worker->shutdown() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:258]
+#12 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#13 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#14 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:08:58.152187 +0000] M#3153 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:08:58.156688 +0000] M#3153 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:08:58.216201 +0000] W#3158 \Chat\Application up.
+[Mon, 19 Jan 2015 12:08:58.224502 +0000] W#3159 \Chat\Application up.
+[Mon, 19 Jan 2015 12:08:58.229962 +0000] W#3156 \Chat\Application up.
+[Mon, 19 Jan 2015 12:08:58.241542 +0000] W#3160 \Chat\Application up.
+[Mon, 19 Jan 2015 12:09:02.458979 +0000] Notice: Undefined variable: appInstance in /opt/phpd2/src/Application.php:26
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/Application.php:26]
+#2  Chat\Application->Chat\{closure}()
+#3  call_user_func() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Pool.php:134]
+#4  PHPDaemon\Servers\WebSocket\Pool->getRoute() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:269]
+#5  PHPDaemon\Servers\WebSocket\Connection->onHandshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:307]
+#6  PHPDaemon\Servers\WebSocket\Connection->handshake() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:491]
+#7  PHPDaemon\Servers\WebSocket\Connection->onRead() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:727]
+#8  PHPDaemon\Network\IOStream->onReadEv()
+#9  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#10 PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#11 PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#12 include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:09:06.469953 +0000] 111
+[Mon, 19 Jan 2015 12:11:06.470886 +0000] Warning: Attempt to modify property of non-object in /opt/phpd2/src/WebSocketRoute.php:31
+#1  PHPDaemon\Core\Daemon::errorHandler() called at [/opt/phpd2/src/WebSocketRoute.php:31]
+#2  Chat\WebSocketRoute->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Servers/WebSocket/Connection.php:221]
+#3  PHPDaemon\Servers\WebSocket\Connection->onFinish() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Network/IOStream.php:834]
+#4  PHPDaemon\Network\IOStream->onStateEv()
+#5  EventBase->dispatch() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Worker.php:254]
+#6  PHPDaemon\Thread\Worker->run() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/PHPDaemon/Thread/Generic.php:126]
+#7  PHPDaemon\Thread\Generic->__invoke() called at [/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd:69]
+#8  include(/opt/phpd2/vendor/kakserpom/phpdaemon/bin/phpd) called at [/opt/phpd2/phpd:7]
+
+[Mon, 19 Jan 2015 12:12:50.419692 +0000] M#3318 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:12:50.424174 +0000] M#3318 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:12:50.495203 +0000] W#3322 \Chat\Application up.
+[Mon, 19 Jan 2015 12:12:50.507038 +0000] W#3321 \Chat\Application up.
+[Mon, 19 Jan 2015 12:12:50.511381 +0000] W#3324 \Chat\Application up.
+[Mon, 19 Jan 2015 12:12:50.522514 +0000] W#3323 \Chat\Application up.
+[Mon, 19 Jan 2015 12:12:58.965794 +0000] 111
+[Mon, 19 Jan 2015 12:13:10.912897 +0000] 111
+[Mon, 19 Jan 2015 12:14:09.337888 +0000] M#3469 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:14:09.348088 +0000] M#3469 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:14:09.406528 +0000] W#3472 \Chat\Application up.
+[Mon, 19 Jan 2015 12:14:19.996149 +0000] 111
+[Mon, 19 Jan 2015 12:14:27.717504 +0000] 111
+[Mon, 19 Jan 2015 12:29:32.999318 +0000] M#5594 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:29:33.010108 +0000] M#5594 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:29:33.062276 +0000] W#5597 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:41.209148 +0000] W#5597 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:41.243019 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:41.554069 +0000] W#5610 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:41.590405 +0000] W#5610 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:42.537520 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:42.849898 +0000] W#5612 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:42.882156 +0000] W#5612 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:43.821484 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:44.131499 +0000] W#5614 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:46.466477 +0000] W#5614 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:46.809542 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:47.119452 +0000] W#5622 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:51.527035 +0000] W#5622 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:51.560243 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:51.870421 +0000] W#5626 \Chat\Application up.
+[Mon, 19 Jan 2015 12:29:55.336151 +0000] W#5626 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:29:55.369977 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:29:55.682833 +0000] W#5634 \Chat\Application up.
+[Mon, 19 Jan 2015 12:30:00.391395 +0000] W#5634 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:30:00.425527 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:30:00.739381 +0000] W#5638 \Chat\Application up.
+[Mon, 19 Jan 2015 12:30:30.449441 +0000] W#5638 crashed by error 'Class 'Chat\ExampleWebSocketTestPageRequest' not found' at /opt/phpd2/src/Application.php:29
+[Mon, 19 Jan 2015 12:30:30.485238 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:30:30.793811 +0000] W#5654 \Chat\Application up.
+[Mon, 19 Jan 2015 12:30:37.683570 +0000] M#5660 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:30:37.692361 +0000] M#5660 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:30:37.745649 +0000] W#5662 \Chat\Application up.
+[Mon, 19 Jan 2015 12:31:47.531805 +0000] M#5714 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:31:47.549021 +0000] M#5714 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:31:47.600920 +0000] W#5717 \Chat\Application up.
+[Mon, 19 Jan 2015 12:32:27.023098 +0000] M#5741 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:32:27.028165 +0000] M#5741 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:32:27.080495 +0000] W#5744 \Chat\Application up.
+[Mon, 19 Jan 2015 12:33:32.037665 +0000] M#5775 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:33:32.054466 +0000] M#5775 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:33:32.096102 +0000] W#5778 \Chat\Application up.
+[Mon, 19 Jan 2015 12:33:41.978331 +0000] Spawning 1 worker(s)
+[Mon, 19 Jan 2015 12:33:42.285928 +0000] W#5791 \Chat\Application up.
+[Mon, 19 Jan 2015 12:33:56.463911 +0000] M#5807 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:33:56.477349 +0000] M#5807 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:33:56.508038 +0000] W#5809 \Chat\Application up.
+[Mon, 19 Jan 2015 12:34:01.976377 +0000] И сюда мы выбираемся
+[Mon, 19 Jan 2015 12:35:04.955520 +0000] M#5840 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 12:35:04.965705 +0000] M#5840 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 12:35:04.999914 +0000] W#5843 \Chat\Application up.
+[Mon, 19 Jan 2015 16:46:39.329218 +0000] M#9669 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Mon, 19 Jan 2015 16:46:39.783521 +0000] M#9669 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Mon, 19 Jan 2015 16:46:40.015448 +0000] W#9675 \Chat\Application up.

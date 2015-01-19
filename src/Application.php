@@ -14,23 +14,21 @@ class Application extends AppInstance
 	public function onReady()
 	{
 
-		$appInstance = $this;
-		$ape = true;
 
 		//Метод timerTask() будет вызываться каждые 1.2 секунды
-		$this->timerTask($appInstance);
+		$this->timerTask();
 
 		$wsServer = WebSocket\Pool::getInstance(); /* @var WebSocket\Pool $wsServer */
 
 		$wsServer->addRoute('chat', function ($client) {
-			$session=new WebSocketRoute($client, $appInstance); // Создаем сессию
+			$session=new WebSocketRoute($client, $this); // Создаем сессию
             $session->id=uniqid(); // Назначаем ей уникальный ID
             $this->sessions[$session->id]=$session; //Сохраняем в массив
             return $session;
 		});
 	}
 
-	function timerTask($appInstance) {
+	function timerTask() {
         // Отправляем каждому клиенту свое сообщение
         $this->data = "";
     	foreach($this->sessions as $id=>$session) {
@@ -44,13 +42,12 @@ class Application extends AppInstance
     	 {
 	         foreach($this->sessions as $id=>$session) {
 	         	$session->client->sendFrame($this->data, 'STRING');
-	            //$session->client->sendFrame($this->data.' для'.$id, 'STRING');
 	         }
 	     }
 
-        \PHPDaemon\Core\Timer::add(function($event) use ($appInstance) {
-            $this->timerTask($appInstance);
+        \PHPDaemon\Core\Timer::add(function($event) {
+            $this->timerTask();
             $event->finish();
-        }, 1e6); // Время задается в микросекундах
+        }, 1e5); // Время задается в микросекундах
     }
 }
