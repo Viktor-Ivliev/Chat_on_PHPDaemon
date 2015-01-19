@@ -8,7 +8,6 @@ use PHPDaemon\Servers\WebSocket;
 class Application extends AppInstance
 {
 	public $requestClass = '\Chat\HttpRequest';
-	public $enableRPC=true; // Без этой строчки не будут работать широковещательные вызовы
     public $sessions=array();
     public $data;
 
@@ -18,7 +17,7 @@ class Application extends AppInstance
 		$appInstance = $this;
 		$ape = true;
 
-		//Метод timerTask() будет вызываться каждые 5 секунд
+		//Метод timerTask() будет вызываться каждые 1.2 секунды
 		$this->timerTask($appInstance);
 
 		$wsServer = WebSocket\Pool::getInstance(); /* @var WebSocket\Pool $wsServer */
@@ -28,7 +27,6 @@ class Application extends AppInstance
             $session->id=uniqid(); // Назначаем ей уникальный ID
             $this->sessions[$session->id]=$session; //Сохраняем в массив
             return $session;
-			//return new WebSocketRoute($client, $this);
 		});
 	}
 
@@ -38,45 +36,21 @@ class Application extends AppInstance
     	foreach($this->sessions as $id=>$session) {
     		if($session->data != "")
     		{
-    			$this->data = $this->data."".$session->data.'<br/>'. count($session->client).'<br/>';
+    			$this->data = $this->data.'('.$id.')<div class="mess">'.$session->data.'</div><br/>';
     			$session->data = "";
     		}
     	}
     	if($this->data!='')
     	 {
 	         foreach($this->sessions as $id=>$session) {
-	            $session->client->sendFrame('Личное '.$this->data.' для'.$id, 'STRING');
+	         	$session->client->sendFrame($this->data, 'STRING');
+	            //$session->client->sendFrame($this->data.' для'.$id, 'STRING');
 	         }
 	     }
 
-        
-        // После отправляем всем клиентам сообщение от каждого воркера (широковещательный вызов)
-	    
-       //$appInstance->broadcastCall('sendBcMessage', array(\PHPDaemon\Core\Daemon::$process->getPid()));
-
-        // Перезапускаем наш метод спустя 5 секунд
         \PHPDaemon\Core\Timer::add(function($event) use ($appInstance) {
             $this->timerTask($appInstance);
             $event->finish();
-        }, 5e6); // Время задается в микросекундах
+        }, 1e6); // Время задается в микросекундах
     }
-    
-   //  // Функция для широковещательного вызова (при вызове срабатывает во всех воркерах)
-   //  public function sendBcMessage($pid) {
-   //  	$this->data = "";
-   //  	foreach($this->sessions as $id=>$session) {
-   //  		if(isset($session->data))
-   //  		{
-   //  			$this->data = $this->data."".$session->data.'<br/>';
-   //  			$session->data = null;
-   //  		}
-   //  	}
-
-   // //      foreach($this->sessions as $id=>$session) {
-			// // $session->client->sendFrame('Воркер #'.$pid.'<span>'.$this->data.'</span><br/>', 'STRING');
-   // //      }
-   //      $this->data = "";
-   //  }
-
-
 }

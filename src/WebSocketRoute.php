@@ -14,7 +14,7 @@ class WebSocketRoute extends Route
         $this->client=$client;
         $this->appInstance=$appInstance;
     }
-
+    //какая то странная идификация, работает и без нее но с ней не вываливается лишний ворнинг
     public function onHandshake() {
 	}
 
