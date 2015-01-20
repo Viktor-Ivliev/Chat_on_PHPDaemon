@@ -32,16 +32,13 @@ class HttpRequest extends Generic
 						transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 						overflow: auto;
 						-webkit-appearance: textarea;
-						background-color: white;
 						border: 1px solid;
-						resize: auto;
-						cursor: auto;
-						padding: 2px;
 						white-space: pre-wrap;
 						word-wrap: break-word;
 					}
 					#name_use_id{
 						width: 300px;
+						height: 30;
 						display: block;
 						margin: 10px 0px;
 						color: #555;
@@ -126,22 +123,33 @@ class HttpRequest extends Generic
 				</style>
 				<title>Чатик</title>
 				<script type="text/javascript">
-					(function (w) {
-						// Example
+					function create() {
 						window.ws = new WebSocket('ws://'+document.domain+':8090/chat');
-						ws.onopen = function () {document.getElementById('log').innerHTML = 'WebSocket opened <br/>'+document.getElementById('log').innerHTML;}
+
+						ws.onopen = function () {
+							document.getElementById('log').innerHTML = '<b>WebSocket opened</b> <br/>'+document.getElementById('log').innerHTML;
+							var message = JSON.stringify({
+								"name":document.forms["publish"].elements["name"].value
+							});
+							ws.send(message);
+						}
+
 						ws.onmessage = function (e) {
 							var json = JSON.parse(e.data);
 							document.getElementById('log').innerHTML = '<b>'+json.name+' :</b><div class="mess"> '+json.message+'</div><br/>'+document.getElementById('log').innerHTML;}
 
 						ws.onclose = function () {document.getElementById('log').innerHTML = 'WebSocket closed <br/>'+document.getElementById('log').innerHTML;}
+
 						window.onbeforeunload = function (ws) {
 							ws.onclose();
 						};
-					})(window);
+
+					};
 
 					function getName() {
-							var message = JSON.stringify({"name":document.forms["publish"].elements["name"].value,"message":document.forms["publish"].elements["message"].value});
+							var message = JSON.stringify({
+											"message":document.forms["publish"].elements["message"].value
+										});
 							document.forms["publish"].elements["message"].value = "";
 						    window.ws.send(message);
 					};
@@ -159,6 +167,7 @@ class HttpRequest extends Generic
 							obj.style.display = "inline";
 							var obj = document.getElementById('lab_message_id');
 							obj.style.display = "inline";
+
 					};
 
 				</script>
@@ -172,7 +181,14 @@ class HttpRequest extends Generic
 					  <input class="btn" type="button" onclick="getName();" value="Отправить" id="message_button_id"/>
 					  <label id="lab_name_use_id">Введите ник:</label>
 					  <input type="text" name="name" id="name_use_id"/>
-					  <input class="btn" type="button" onclick="showHide();" value="Сохранить" id="name_use_button_id"/>
+					  <input class="btn" type="button" onclick='
+					  	  if(document.forms["publish"].elements["name"].value=="")
+					  	  {
+						  	document.forms["publish"].elements["name"].value="user";
+						  }
+						  create();
+						  showHide();
+					  ' value="Сохранить" id="name_use_button_id"/>
 					</form>
 
 					<div id="log"></div>

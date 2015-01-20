@@ -17,7 +17,7 @@ class Application extends AppInstance
 		$wsServer->addRoute('chat', function ($client) {
 			$session=new WebSocketRoute($client, $this); // Создаем сессию
             $session->id=uniqid(); // Назначаем ей уникальный ID
-            $this->sessions[$session->id]=$session; //Сохраняем в массив
+			$this->sessions[$session->id]=$session; //Сохраняем в массив
             return $session;
 		});
 	}

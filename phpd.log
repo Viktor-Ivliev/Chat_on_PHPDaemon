@@ -1,113 +1,222 @@
-[Mon, 19 Jan 2015 20:53:07.750805 +0000] M#14647 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 20:53:07.760292 +0000] M#14647 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 20:53:07.797977 +0000] W#14649 \Chat\Application up.
-[Mon, 19 Jan 2015 21:00:39.807686 +0000] M#14703 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 21:00:39.816406 +0000] M#14703 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 21:00:39.856095 +0000] W#14705 \Chat\Application up.
-[Mon, 19 Jan 2015 21:48:03.279072 +0000] M#15047 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 21:48:03.470051 +0000] M#15047 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 21:48:03.865144 +0000] W#15050 \Chat\Application up.
-[Mon, 19 Jan 2015 21:49:13.853483 +0000] M#15091 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 21:49:13.863497 +0000] M#15091 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 21:49:13.900806 +0000] W#15094 \Chat\Application up.
-[Mon, 19 Jan 2015 21:50:07.009926 +0000] M#15134 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 21:50:07.023554 +0000] M#15134 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 21:50:07.072842 +0000] W#15137 \Chat\Application up.
-[Mon, 19 Jan 2015 22:03:49.639785 +0000] M#15240 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:03:49.708924 +0000] M#15240 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:03:49.784258 +0000] W#15244 \Chat\Application up.
-[Mon, 19 Jan 2015 22:04:27.519398 +0000] M#15275 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:04:27.527705 +0000] M#15275 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:04:27.570572 +0000] W#15278 \Chat\Application up.
-[Mon, 19 Jan 2015 22:06:56.132447 +0000] M#15329 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:06:56.145659 +0000] M#15329 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:06:56.187058 +0000] W#15332 \Chat\Application up.
-[Mon, 19 Jan 2015 22:12:29.050438 +0000] M#15446 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:12:29.067366 +0000] M#15446 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:12:29.126583 +0000] W#15448 \Chat\Application up.
-[Mon, 19 Jan 2015 22:14:27.482963 +0000] M#15486 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:14:27.493825 +0000] M#15486 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:14:27.529345 +0000] W#15489 \Chat\Application up.
-[Mon, 19 Jan 2015 22:15:27.553761 +0000] M#15522 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:15:27.561771 +0000] M#15522 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:15:27.603039 +0000] W#15524 \Chat\Application up.
-[Mon, 19 Jan 2015 22:39:02.748993 +0000] M#15826 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:39:02.764413 +0000] M#15826 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:39:02.830157 +0000] W#15829 \Chat\Application up.
-[Mon, 19 Jan 2015 22:41:22.156773 +0000] M#15889 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:41:22.165738 +0000] M#15889 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:41:22.218004 +0000] W#15892 \Chat\Application up.
-[Mon, 19 Jan 2015 22:50:11.919201 +0000] M#15985 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:50:11.926962 +0000] M#15985 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:50:11.967561 +0000] W#15988 \Chat\Application up.
-[Mon, 19 Jan 2015 22:57:31.286766 +0000] M#16064 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 22:57:31.304715 +0000] M#16064 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 22:57:31.339626 +0000] W#16066 \Chat\Application up.
-[Mon, 19 Jan 2015 23:02:58.185001 +0000] M#16111 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:02:58.196370 +0000] M#16111 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:02:58.254921 +0000] W#16114 \Chat\Application up.
-[Mon, 19 Jan 2015 23:05:29.506484 +0000] M#16152 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:05:29.516592 +0000] M#16152 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:05:29.563486 +0000] W#16155 \Chat\Application up.
-[Mon, 19 Jan 2015 23:06:52.353922 +0000] M#16194 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:06:52.367528 +0000] M#16194 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:06:52.398254 +0000] W#16197 \Chat\Application up.
-[Mon, 19 Jan 2015 23:09:56.297358 +0000] M#16277 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:09:56.308761 +0000] M#16277 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:09:56.351279 +0000] W#16280 \Chat\Application up.
-[Mon, 19 Jan 2015 23:12:14.243410 +0000] M#16318 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:12:14.257197 +0000] M#16318 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:12:14.315632 +0000] W#16320 \Chat\Application up.
-[Mon, 19 Jan 2015 23:13:09.296612 +0000] M#16354 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:13:09.310737 +0000] M#16354 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:13:09.358739 +0000] W#16357 \Chat\Application up.
-[Mon, 19 Jan 2015 23:15:50.735316 +0000] M#16394 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:15:50.750792 +0000] M#16394 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:15:50.820241 +0000] W#16396 \Chat\Application up.
-[Mon, 19 Jan 2015 23:17:06.897205 +0000] M#16435 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:17:06.908995 +0000] M#16435 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:17:06.935677 +0000] W#16437 \Chat\Application up.
-[Mon, 19 Jan 2015 23:17:55.880495 +0000] M#16468 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:17:55.893945 +0000] M#16468 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:17:55.953643 +0000] W#16470 \Chat\Application up.
-[Mon, 19 Jan 2015 23:19:02.458214 +0000] M#16503 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:19:02.467013 +0000] M#16503 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:19:02.508912 +0000] W#16506 \Chat\Application up.
-[Mon, 19 Jan 2015 23:19:58.375905 +0000] M#16539 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:19:58.385473 +0000] M#16539 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:19:58.436356 +0000] W#16542 \Chat\Application up.
-[Mon, 19 Jan 2015 23:21:09.304042 +0000] M#16575 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:21:09.309760 +0000] M#16575 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:21:09.357065 +0000] W#16578 \Chat\Application up.
-[Mon, 19 Jan 2015 23:22:39.972731 +0000] M#16609 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:22:39.983145 +0000] M#16609 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:22:40.052208 +0000] W#16612 \Chat\Application up.
-[Mon, 19 Jan 2015 23:25:48.315206 +0000] M#16673 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:25:48.332293 +0000] M#16673 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:25:48.388171 +0000] W#16676 \Chat\Application up.
-[Mon, 19 Jan 2015 23:26:31.293743 +0000] M#16711 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:26:31.306435 +0000] M#16711 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:26:31.354381 +0000] W#16714 \Chat\Application up.
-[Mon, 19 Jan 2015 23:33:09.389817 +0000] M#16782 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:33:09.404414 +0000] M#16782 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:33:09.440620 +0000] W#16785 \Chat\Application up.
-[Mon, 19 Jan 2015 23:33:13.362106 +0000] Spawning 1 worker(s)
-[Mon, 19 Jan 2015 23:33:13.673513 +0000] W#16798 \Chat\Application up.
-[Mon, 19 Jan 2015 23:33:49.004122 +0000] M#16820 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:33:49.019801 +0000] M#16820 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:33:49.051441 +0000] W#16823 \Chat\Application up.
-[Mon, 19 Jan 2015 23:37:25.380429 +0000] M#16878 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:37:25.392251 +0000] M#16878 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:37:25.434176 +0000] W#16881 \Chat\Application up.
-[Mon, 19 Jan 2015 23:38:17.176382 +0000] M#16927 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:38:17.186914 +0000] M#16927 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:38:17.232651 +0000] W#16929 \Chat\Application up.
-[Mon, 19 Jan 2015 23:41:01.617590 +0000] M#16979 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:41:01.629990 +0000] M#16979 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:41:01.674009 +0000] W#16981 \Chat\Application up.
-[Mon, 19 Jan 2015 23:42:14.873275 +0000] M#17015 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:42:14.887459 +0000] M#17015 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:42:14.933891 +0000] W#17018 \Chat\Application up.
-[Mon, 19 Jan 2015 23:49:03.887929 +0000] M#17182 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
-[Mon, 19 Jan 2015 23:49:03.892999 +0000] M#17182 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
-[Mon, 19 Jan 2015 23:49:03.933136 +0000] W#17185 \Chat\Application up.
+[Tue, 20 Jan 2015 11:05:33.344795 +0000] M#21246 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:05:33.356108 +0000] M#21246 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:05:33.396009 +0000] W#21249 \Chat\Application up.
+[Tue, 20 Jan 2015 11:05:42.240861 +0000] W#21249 crashed by error 'Cannot use object of type Chat\WebSocketRoute as array' at /opt/phpd2/src/WebSocketRoute.php:27
+[Tue, 20 Jan 2015 11:05:42.573721 +0000] Spawning 1 worker(s)
+[Tue, 20 Jan 2015 11:05:42.882614 +0000] W#21262 \Chat\Application up.
+[Tue, 20 Jan 2015 11:06:29.055792 +0000] M#21285 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:06:29.064365 +0000] M#21285 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:06:29.105955 +0000] W#21288 \Chat\Application up.
+[Tue, 20 Jan 2015 11:06:38.671662 +0000] eeerrr
+[Tue, 20 Jan 2015 11:06:38.671772 +0000] 54be36bce8334
+[Tue, 20 Jan 2015 11:06:38.671873 +0000] eeerrr
+[Tue, 20 Jan 2015 11:06:38.672001 +0000] 54be36bce8334
+[Tue, 20 Jan 2015 11:06:38.672081 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:09:00.886133 +0000] M#21335 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:09:00.898620 +0000] M#21335 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:09:00.944430 +0000] W#21338 \Chat\Application up.
+[Tue, 20 Jan 2015 11:09:22.114499 +0000] vasilisa
+[Tue, 20 Jan 2015 11:09:22.114615 +0000] 54be375d20c06
+[Tue, 20 Jan 2015 11:09:22.114837 +0000] 54be375d20c06
+[Tue, 20 Jan 2015 11:09:22.114924 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:09:37.923756 +0000] vasilisa
+[Tue, 20 Jan 2015 11:09:37.923850 +0000] user
+[Tue, 20 Jan 2015 11:09:37.923893 +0000] 54be37703cfaa
+[Tue, 20 Jan 2015 11:09:37.924003 +0000] 54be375d20c06
+[Tue, 20 Jan 2015 11:09:37.924089 +0000] 54be37703cfaa
+[Tue, 20 Jan 2015 11:09:37.924129 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:26:05.656184 +0000] M#21439 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:26:05.666987 +0000] M#21439 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:26:05.702558 +0000] W#21442 \Chat\Application up.
+[Tue, 20 Jan 2015 11:28:48.323184 +0000] M#21477 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:28:48.333342 +0000] M#21477 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:28:48.381059 +0000] W#21480 \Chat\Application up.
+[Tue, 20 Jan 2015 11:28:58.885563 +0000] user
+[Tue, 20 Jan 2015 11:28:58.885683 +0000] 54be3bf8a5919
+[Tue, 20 Jan 2015 11:28:58.885793 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:31:36.258928 +0000] M#21519 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:31:36.269144 +0000] M#21519 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:31:36.308216 +0000] W#21522 \Chat\Application up.
+[Tue, 20 Jan 2015 11:31:44.295311 +0000] user
+[Tue, 20 Jan 2015 11:31:44.295435 +0000] 54be3c9f9b43c
+[Tue, 20 Jan 2015 11:31:44.295540 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:31:46.195063 +0000] user
+[Tue, 20 Jan 2015 11:31:46.195162 +0000] 54be3c9f9b43c
+[Tue, 20 Jan 2015 11:31:46.195206 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:33:21.524267 +0000] M#21563 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:33:21.535419 +0000] M#21563 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:33:21.577572 +0000] W#21566 \Chat\Application up.
+[Tue, 20 Jan 2015 11:33:30.014858 +0000] user
+[Tue, 20 Jan 2015 11:33:30.014978 +0000] 54be3d08904f3
+[Tue, 20 Jan 2015 11:33:30.015200 +0000] 54be3d08904f3
+[Tue, 20 Jan 2015 11:33:30.015286 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:33:47.858995 +0000] user
+[Tue, 20 Jan 2015 11:33:47.859092 +0000] user
+[Tue, 20 Jan 2015 11:33:47.859139 +0000] 54be3d18e6ed2
+[Tue, 20 Jan 2015 11:33:47.859251 +0000] 54be3d08904f3
+[Tue, 20 Jan 2015 11:33:47.859336 +0000] 54be3d18e6ed2
+[Tue, 20 Jan 2015 11:33:47.859376 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:35:35.924231 +0000] M#21608 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:35:35.933922 +0000] M#21608 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:35:35.972260 +0000] W#21611 \Chat\Application up.
+[Tue, 20 Jan 2015 11:35:44.311393 +0000] user
+[Tue, 20 Jan 2015 11:35:44.311516 +0000] 54be3d8ea0e28
+[Tue, 20 Jan 2015 11:35:44.311737 +0000] 54be3d8ea0e28
+[Tue, 20 Jan 2015 11:35:44.311824 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:35:59.877503 +0000] user
+[Tue, 20 Jan 2015 11:35:59.877600 +0000] user
+[Tue, 20 Jan 2015 11:35:59.877647 +0000] 54be3d9bb1d47
+[Tue, 20 Jan 2015 11:35:59.877760 +0000] 54be3d8ea0e28
+[Tue, 20 Jan 2015 11:35:59.877847 +0000] 54be3d9bb1d47
+[Tue, 20 Jan 2015 11:35:59.877886 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:39:10.415665 +0000] M#21668 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:39:10.432151 +0000] M#21668 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:39:10.485649 +0000] W#21670 \Chat\Application up.
+[Tue, 20 Jan 2015 11:39:22.599398 +0000] user
+[Tue, 20 Jan 2015 11:39:22.599522 +0000] 54be3e66c489c
+[Tue, 20 Jan 2015 11:39:22.599627 +0000] user
+[Tue, 20 Jan 2015 11:39:22.599705 +0000] --------------star--------
+[Tue, 20 Jan 2015 11:39:22.599781 +0000] 0
+[Tue, 20 Jan 2015 11:39:22.599936 +0000] 54be3e66c489c
+[Tue, 20 Jan 2015 11:39:22.599977 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:41:14.108351 +0000] M#21715 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:41:14.119250 +0000] M#21715 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:41:14.159679 +0000] W#21717 \Chat\Application up.
+[Tue, 20 Jan 2015 11:41:30.048915 +0000] user
+[Tue, 20 Jan 2015 11:41:30.049042 +0000] 54be3ee77c75f
+[Tue, 20 Jan 2015 11:41:30.049143 +0000] user
+[Tue, 20 Jan 2015 11:41:30.049215 +0000] --------------star--------
+[Tue, 20 Jan 2015 11:41:30.049289 +0000] user
+[Tue, 20 Jan 2015 11:41:30.049327 +0000] (1)
+[Tue, 20 Jan 2015 11:41:30.049475 +0000] 54be3ee77c75f
+[Tue, 20 Jan 2015 11:41:30.049517 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:42:34.569096 +0000] M#21756 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:42:34.581579 +0000] M#21756 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:42:34.622581 +0000] W#21759 \Chat\Application up.
+[Tue, 20 Jan 2015 11:42:44.142525 +0000] user
+[Tue, 20 Jan 2015 11:42:44.142651 +0000] 54be3f32aabdf
+[Tue, 20 Jan 2015 11:42:44.142756 +0000] user
+[Tue, 20 Jan 2015 11:42:44.142831 +0000] --------------star--------
+[Tue, 20 Jan 2015 11:42:44.142907 +0000] user
+[Tue, 20 Jan 2015 11:42:44.142947 +0000] (1)
+[Tue, 20 Jan 2015 11:42:44.143099 +0000] 54be3f32aabdf
+[Tue, 20 Jan 2015 11:42:44.143143 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:43:04.718806 +0000] user
+[Tue, 20 Jan 2015 11:43:04.718904 +0000] ggg
+[Tue, 20 Jan 2015 11:43:04.718952 +0000] 54be3f4598853
+[Tue, 20 Jan 2015 11:43:04.718992 +0000] ggg
+[Tue, 20 Jan 2015 11:43:04.719030 +0000] --------------star--------
+[Tue, 20 Jan 2015 11:43:04.719068 +0000] user
+[Tue, 20 Jan 2015 11:43:04.719102 +0000] (1)
+[Tue, 20 Jan 2015 11:43:04.719202 +0000] 54be3f32aabdf
+[Tue, 20 Jan 2015 11:43:04.719246 +0000] ggg
+[Tue, 20 Jan 2015 11:43:04.719279 +0000] (1)
+[Tue, 20 Jan 2015 11:43:04.719350 +0000] 54be3f4598853
+[Tue, 20 Jan 2015 11:43:04.719389 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:43:11.760586 +0000] user
+[Tue, 20 Jan 2015 11:43:11.760686 +0000] user
+[Tue, 20 Jan 2015 11:43:11.760734 +0000] 54be3f4e7b784
+[Tue, 20 Jan 2015 11:43:11.760775 +0000] user
+[Tue, 20 Jan 2015 11:43:11.760833 +0000] --------------star--------
+[Tue, 20 Jan 2015 11:43:11.760874 +0000] user
+[Tue, 20 Jan 2015 11:43:11.760908 +0000] (1)
+[Tue, 20 Jan 2015 11:43:11.761018 +0000] 54be3f32aabdf
+[Tue, 20 Jan 2015 11:43:11.761062 +0000] user
+[Tue, 20 Jan 2015 11:43:11.761096 +0000] (2)
+[Tue, 20 Jan 2015 11:43:11.761169 +0000] 54be3f4e7b784
+[Tue, 20 Jan 2015 11:43:11.761207 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:49:34.359797 +0000] M#21935 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:49:34.369695 +0000] M#21935 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:49:34.410150 +0000] W#21938 \Chat\Application up.
+[Tue, 20 Jan 2015 11:49:44.428947 +0000] user
+[Tue, 20 Jan 2015 11:49:44.429182 +0000] 54be40d6cb742
+[Tue, 20 Jan 2015 11:49:44.429292 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:49:56.415597 +0000] user
+[Tue, 20 Jan 2015 11:49:56.415695 +0000] user
+[Tue, 20 Jan 2015 11:49:56.415817 +0000] 54be40d6cb742
+[Tue, 20 Jan 2015 11:49:56.415905 +0000] 54be40e2ed2f2
+[Tue, 20 Jan 2015 11:49:56.416018 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:55:01.269072 +0000] M#22003 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:55:01.282090 +0000] M#22003 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:55:01.310222 +0000] W#22006 \Chat\Application up.
+[Tue, 20 Jan 2015 11:55:23.051520 +0000] 54be422827c7e
+[Tue, 20 Jan 2015 11:55:23.051631 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:55:30.187072 +0000] 54be422827c7e
+[Tue, 20 Jan 2015 11:55:30.187497 +0000] 54be4230104f6
+[Tue, 20 Jan 2015 11:55:30.187573 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 11:58:58.885312 +0000] M#22060 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 11:58:58.895220 +0000] M#22060 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 11:58:58.932134 +0000] W#22063 \Chat\Application up.
+[Tue, 20 Jan 2015 11:59:06.835096 +0000] array(1) {
+  ["message"]=>
+  string(2) "dd"
+}
+
+[Tue, 20 Jan 2015 11:59:06.835345 +0000] 54be43097a47c
+[Tue, 20 Jan 2015 11:59:06.835457 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 12:01:56.825313 +0000] M#22663 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:01:56.833852 +0000] M#22663 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:01:56.873999 +0000] W#22666 \Chat\Application up.
+[Tue, 20 Jan 2015 12:02:05.567444 +0000] array(1) {
+  ["message"]=>
+  string(3) "ddd"
+}
+
+[Tue, 20 Jan 2015 12:02:05.567678 +0000] 54be43bc1a3b8
+[Tue, 20 Jan 2015 12:02:05.567792 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 12:03:29.813571 +0000] M#22703 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:03:29.818401 +0000] M#22703 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:03:29.865403 +0000] W#22706 \Chat\Application up.
+[Tue, 20 Jan 2015 12:03:37.971733 +0000] array(1) {
+  ["message"]=>
+  string(2) "dd"
+}
+
+[Tue, 20 Jan 2015 12:03:37.971971 +0000] 54be44178df9f
+[Tue, 20 Jan 2015 12:03:37.972083 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 12:05:23.561541 +0000] M#22744 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:05:23.571582 +0000] M#22744 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:05:23.611755 +0000] W#22747 \Chat\Application up.
+[Tue, 20 Jan 2015 12:05:29.535538 +0000] array(1) {
+  ["name"]=>
+  string(4) "user"
+}
+
+[Tue, 20 Jan 2015 12:05:29.535668 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 12:05:39.309808 +0000] array(1) {
+  ["message"]=>
+  string(3) "bbb"
+}
+
+[Tue, 20 Jan 2015 12:05:39.310033 +0000] 54be448981ee2
+[Tue, 20 Jan 2015 12:05:39.310087 +0000] ---------------end--------------
+[Tue, 20 Jan 2015 12:12:57.308999 +0000] M#22844 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:12:57.336347 +0000] M#22844 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:12:57.385342 +0000] W#22847 \Chat\Application up.
+[Tue, 20 Jan 2015 12:13:05.982366 +0000] W#22847 crashed by error 'Call to undefined function Chat\unique_name()' at /opt/phpd2/src/WebSocketRoute.php:23
+[Tue, 20 Jan 2015 12:13:06.013992 +0000] Spawning 1 worker(s)
+[Tue, 20 Jan 2015 12:13:06.323479 +0000] W#22862 \Chat\Application up.
+[Tue, 20 Jan 2015 12:14:53.167663 +0000] M#22890 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:14:53.172637 +0000] M#22890 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:14:53.216321 +0000] W#22892 \Chat\Application up.
+[Tue, 20 Jan 2015 12:14:59.161052 +0000] W#22892 crashed by error 'Call to undefined function Chat\unique_name()' at /opt/phpd2/src/WebSocketRoute.php:23
+[Tue, 20 Jan 2015 12:14:59.191327 +0000] Spawning 1 worker(s)
+[Tue, 20 Jan 2015 12:14:59.507136 +0000] W#22906 \Chat\Application up.
+[Tue, 20 Jan 2015 12:16:10.545743 +0000] M#22935 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:16:10.557063 +0000] M#22935 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:16:10.595873 +0000] W#22937 \Chat\Application up.
+[Tue, 20 Jan 2015 12:17:32.264332 +0000] M#22979 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:17:32.273129 +0000] M#22979 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:17:32.313489 +0000] W#22982 \Chat\Application up.
+[Tue, 20 Jan 2015 12:21:10.402426 +0000] M#23024 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:21:10.411348 +0000] M#23024 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:21:10.455535 +0000] W#23027 \Chat\Application up.
+[Tue, 20 Jan 2015 12:23:42.492866 +0000] M#23068 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:23:42.499188 +0000] M#23068 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:23:42.542126 +0000] W#23071 \Chat\Application up.
+[Tue, 20 Jan 2015 12:23:48.874065 +0000] W#23071 crashed by error 'Class 'Chat\ChatWebSocketRoute' not found' at /opt/phpd2/src/Application.php:18
+[Tue, 20 Jan 2015 12:23:48.906262 +0000] Spawning 1 worker(s)
+[Tue, 20 Jan 2015 12:23:49.226594 +0000] W#23084 \Chat\Application up.
+[Tue, 20 Jan 2015 12:26:31.379246 +0000] M#23118 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\HTTP\Pool up.
+[Tue, 20 Jan 2015 12:26:31.390658 +0000] M#23118 \PHPDaemon\Core\Pool:\PHPDaemon\Servers\WebSocket\Pool up.
+[Tue, 20 Jan 2015 12:26:31.416449 +0000] W#23121 \Chat\Application up.
