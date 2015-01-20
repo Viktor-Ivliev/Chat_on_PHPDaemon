@@ -108,10 +108,18 @@ class HttpRequest extends Generic
 						background-color: #184063;
 						border-color: #2431CA;
 					}
+					.mess, .user_conected, .user_close_conected{
+						display: inline;
+					}
 
 					.mess{
-						display: inline;
 						color: darkslateblue;
+					}
+					.user_conected{
+						color: darkmagenta;
+					}
+					.user_close_conected{
+						color: saddlebrown;
 					}
 					body{
 						font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
@@ -136,8 +144,30 @@ class HttpRequest extends Generic
 
 						ws.onmessage = function (e) {
 							var json = JSON.parse(e.data);
-							document.getElementById('log').innerHTML = '<b>'+json.name+' :</b><div class="mess"> '+json.message+'</div><br/>'+document.getElementById('log').innerHTML;}
-
+							if (json.message === undefined) {
+								if(json.close_name === undefined)
+								{
+									document.getElementById('log').innerHTML = '<div class="user_conected">' +
+																					'Пользователь:<b>' +
+																						json.name +
+																					':</b>вошел в чат...' +
+																				'</div><br/>' + document.getElementById('log').innerHTML;
+								} else {
+									document.getElementById('log').innerHTML = '<div class="user_close_conected">' +
+																					'Пользователь:<b>' +
+																						json.name + '' +
+																					' :</b>покинул чат=(' +
+																				'</div><br/>' + document.getElementById('log').innerHTML;
+								}
+							} else {
+								document.getElementById('log').innerHTML = '<b>' +
+																				json.name +
+																			' :</b>' +
+																			'<div class="mess"> ' +
+																				json.message +
+																			'</div><br/>' + document.getElementById('log').innerHTML;
+							}
+						}
 						ws.onclose = function () {document.getElementById('log').innerHTML = 'WebSocket closed <br/>'+document.getElementById('log').innerHTML;}
 
 						window.onbeforeunload = function (ws) {

@@ -2,8 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9ef351ac-590a-4332-98bf-30cd1d86e3d9" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/css/chat.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Application.php" afterPath="$PROJECT_DIR$/src/Application.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/HttpRequest.php" afterPath="$PROJECT_DIR$/src/HttpRequest.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/WebSocketRoute.php" afterPath="$PROJECT_DIR$/src/WebSocketRoute.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/phpd.log" afterPath="$PROJECT_DIR$/phpd.log" />
@@ -48,8 +46,8 @@
       <file leaf-file-name="WebSocketRoute.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/WebSocketRoute.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.375" vertical-offset="45" max-vertical-offset="870">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state vertical-scroll-proportion="-31.125" vertical-offset="168" max-vertical-offset="1095">
+              <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
               <folding>
                 <element signature="e#22#48#0#PHP" expanded="true" />
               </folding>
@@ -60,8 +58,8 @@
       <file leaf-file-name="HttpRequest.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/HttpRequest.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="24.416666" vertical-offset="2461" max-vertical-offset="3105">
-              <caret line="125" column="39" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
+            <state vertical-scroll-proportion="-10.583333" vertical-offset="2116" max-vertical-offset="3555">
+              <caret line="158" column="98" selection-start-line="158" selection-start-column="98" selection-end-line="158" selection-end-column="98" />
               <folding />
             </state>
           </provider>
@@ -70,8 +68,8 @@
       <file leaf-file-name="phpd.log" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/phpd.log">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7305389" vertical-offset="2752" max-vertical-offset="3420">
-              <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="668">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -87,10 +85,10 @@
       <list>
         <option value="$PROJECT_DIR$/src/css/chat.css" />
         <option value="$PROJECT_DIR$/vendor/kakserpom/phpdaemon/PHPDaemon/HTTPRequest/Generic.php" />
-        <option value="$PROJECT_DIR$/phpd.log" />
-        <option value="$PROJECT_DIR$/src/HttpRequest.php" />
-        <option value="$PROJECT_DIR$/src/WebSocketRoute.php" />
         <option value="$PROJECT_DIR$/src/Application.php" />
+        <option value="$PROJECT_DIR$/src/WebSocketRoute.php" />
+        <option value="$PROJECT_DIR$/src/HttpRequest.php" />
+        <option value="$PROJECT_DIR$/phpd.log" />
       </list>
     </option>
   </component>
@@ -328,14 +326,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/HttpRequest.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="24.416666" vertical-offset="2461" max-vertical-offset="3105">
-          <caret line="125" column="39" selection-start-line="125" selection-start-column="39" selection-end-line="125" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Application.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.375" vertical-offset="0" max-vertical-offset="450">
@@ -348,18 +338,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/WebSocketRoute.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.375" vertical-offset="45" max-vertical-offset="870">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state vertical-scroll-proportion="-31.125" vertical-offset="168" max-vertical-offset="1095">
+          <caret line="61" column="37" selection-start-line="61" selection-start-column="37" selection-end-line="61" selection-end-column="37" />
           <folding>
             <element signature="e#22#48#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/HttpRequest.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.583333" vertical-offset="2116" max-vertical-offset="3555">
+          <caret line="158" column="98" selection-start-line="158" selection-start-column="98" selection-end-line="158" selection-end-column="98" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/phpd.log">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7305389" vertical-offset="2752" max-vertical-offset="3420">
-          <caret line="216" column="0" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="668">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>

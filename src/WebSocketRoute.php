@@ -20,10 +20,16 @@ class WebSocketRoute extends Route
 	public function onFrame($data, $type) {
         $date= (array) json_decode($data);
         if(isset($date["name"])) {
-            $this->unique_name($date["name"]);
-        }else{
+            $date["name"] = $this->unique_name($date["name"]);
             foreach ($this->appInstance->sessions as $id => $session) {
-                $date["name"] = $this->name.$this->prefix_name_index;
+                if($this->id!=$id)
+                {
+                    $session->client->sendFrame(json_encode($date), 'STRING');
+                }
+            }
+        }else{
+            $date["name"] = $this->name.$this->prefix_name_index;
+            foreach ($this->appInstance->sessions as $id => $session) {
                 $session->client->sendFrame(json_encode($date), 'STRING');
             }
         }
@@ -43,11 +49,20 @@ class WebSocketRoute extends Route
         } else {
             $this->prefix_name_index = " (" . $count . ")";
         }
+        return $this->name.$this->prefix_name_index;
     }
 
 	// Этот метод срабатывает при закрытии соединения клиентом
     public function onFinish() {
         // Удаляем сессию из массива
+        foreach ($this->appInstance->sessions as $id => $session) {
+            if($this->id!=$id)
+            {
+                $date["name"] = $this->name.$this->prefix_name_index;
+                $date["close_name"]=1;
+                $session->client->sendFrame(json_encode($date), 'STRING');
+            }
+        }
         unset($this->appInstance->sessions[$this->id]);
     }
 }
