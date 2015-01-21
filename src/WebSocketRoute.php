@@ -18,23 +18,26 @@ class WebSocketRoute extends Route
     }
 
 	public function onFrame($data, $type) {
-        $date= (array) json_decode($data);
-        if(isset($date["name"])) {
-            $date["name"] = $this->UniqueName($date["name"]);
-            $date["list_names"]=$this->ListName();
-            foreach ($this->appInstance->sessions as $id => $session) {
-                if($this->id!=$id)
-                {
-                    $session->client->sendFrame(json_encode($date), 'STRING');
+        if($data!="mes") {
+            $data_j = (array)json_decode($data);
+            if (isset($data_j["name"])) {
+                $data_j["name"] = $this->UniqueName($data_j["name"]);
+                $data_j["list_names"] = $this->ListName();
+                foreach ($this->appInstance->sessions as $id => $session) {
+                    if ($this->id != $id) {
+                        $session->client->sendFrame(json_encode($data_j), 'STRING');
+                    }
+                }
+                $data_j["this_name"] = true;
+                $this->client->sendFrame(json_encode($data_j), 'STRING');
+            } else {
+                $data_j["name"] = $this->name . $this->prefix_name_index;
+                foreach ($this->appInstance->sessions as $id => $session) {
+                    $session->client->sendFrame(json_encode($data_j), 'STRING');
                 }
             }
-            $date["this_name"]=true;
-            $this->client->sendFrame(json_encode($date), 'STRING');
         }else{
-            $date["name"] = $this->name.$this->prefix_name_index;
-            foreach ($this->appInstance->sessions as $id => $session) {
-                $session->client->sendFrame(json_encode($date), 'STRING');
-            }
+            $this->client->sendFrame($data, 'STRING');
         }
 	}
     /// проверка на уникальность имени, в противном случае присваевает прэфикс
@@ -82,11 +85,11 @@ class WebSocketRoute extends Route
 	// Этот метод срабатывает при закрытии соединения клиентом
     public function onFinish() {
         // Удаляем сессию из массива
-        $date["list_names"]=$this->ListName(false);
+        $data["list_names"]=$this->ListName(false);
         foreach ($this->appInstance->sessions as $id => $session) {
-            $date["name"] = $this->name.$this->prefix_name_index;
-            $date["close_name"]=1;
-            $session->client->sendFrame(json_encode($date), 'STRING');
+            $data["name"] = $this->name.$this->prefix_name_index;
+            $data["close_name"]=1;
+            $session->client->sendFrame(json_encode($data), 'STRING');
         }
         unset($this->appInstance->sessions[$this->id]);
     }

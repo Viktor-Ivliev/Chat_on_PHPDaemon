@@ -82,6 +82,9 @@ class HttpRequest extends Generic
 						top: 3%;
 						min-width: 33%;
 					}
+					form{
+						padding-top: 10px;
+					}
 					.btn{
 						overflow: visible;
 						text-transform: none;
@@ -145,16 +148,31 @@ class HttpRequest extends Generic
 						color: burlywood;
 						list-style-type: none;
 					}
+					#lab_name{
+						color: brown;
+						margin-left: 20px
+					}
 					body{
 						font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 						font-size: 14px;
 						line-height: 1.42857143;
 						color: #333;
-						background: rgb(185, 186, 206);
+						background: rgb(203,206,181); /* Old browsers */
+						background: -moz-linear-gradient(left, rgba(203,206,181,1) 0%, rgba(78,89,88,1) 49%, rgba(203,206,181,1) 99%); /* FF3.6+ */
+						background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(203,206,181,1)), color-stop(49%,rgba(78,89,88,1)), color-stop(99%,rgba(203,206,181,1))); /* Chrome,Safari4+ */
+						background: -webkit-linear-gradient(left, rgba(203,206,181,1) 0%,rgba(78,89,88,1) 49%,rgba(203,206,181,1) 99%); /* Chrome10+,Safari5.1+ */
+						background: -o-linear-gradient(left, rgba(203,206,181,1) 0%,rgba(78,89,88,1) 49%,rgba(203,206,181,1) 99%); /* Opera 11.10+ */
+						background: -ms-linear-gradient(left, rgba(203,206,181,1) 0%,rgba(78,89,88,1) 49%,rgba(203,206,181,1) 99%); /* IE10+ */
+						background: linear-gradient(to right, rgba(203,206,181,1) 0%,rgba(78,89,88,1) 49%,rgba(203,206,181,1) 99%); /* W3C */
+						filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cbceb5', endColorstr='#cbceb5',GradientType=1 ); /* IE6-9 */
+
 					}
 				</style>
 				<title>Чатик</title>
 				<script type="text/javascript">
+
+
+
 					function create() {
 						window.ws = new WebSocket('ws://'+document.domain+':8090/chat');
 						ws.onopen = function () {
@@ -162,52 +180,53 @@ class HttpRequest extends Generic
 							var message = JSON.stringify({
 								"name":document.forms["publish"].elements["name"].value
 							});
+							setInterval('ws.send("mes")', 2*58*1000);
 							ws.send(message);
 						}
 
+
 						ws.onmessage = function (e) {
-							var json = JSON.parse(e.data);
-							if (json.message === undefined) {
-								if(json.close_name === undefined)
-								{
-									if(json.this_name === undefined)
-									{
-										document.getElementById('log').innerHTML = '<div class="user_conected">' +
+							if (e.data = "mes") {
+								var json = JSON.parse(e.data);
+								if (json.message === undefined) {
+									if (json.close_name === undefined) {
+										if (json.this_name === undefined) {
+											document.getElementById('log').innerHTML = '<div class="user_conected">' +
 											'Пользователь:<b>' +
 											json.name +
 											':</b>вошел в чат...' +
-										'</div><br/>' + document.getElementById('log').innerHTML;
+											'</div><br/>' + document.getElementById('log').innerHTML;
+										}
+
+									} else {
+										if (json.this_name === undefined) {
+											document.getElementById('log').innerHTML = '<div class="user_close_conected">' +
+											'Пользователь:<b>' +
+											json.name + '' +
+											' :</b>покинул чат=(' +
+											'</div><br/>' + document.getElementById('log').innerHTML;
+										}
 									}
+									document.getElementById('list_names').innerHTML = '<li class="title_names">Всего : ' + json.list_names.length + '</li>';
+									for (var i = 0; i < json.list_names.length; i++) {
+										document.getElementById('list_names').innerHTML += '<li>' + json.list_names[i] + '</li>';
+									}
+									if (document.getElementById('lab_name').innerHTML == "Ваш ник: ") {
+										document.getElementById('lab_name').innerHTML += json.name;
+									}
+
 
 								} else {
-									if(json.this_name === undefined) {
-										document.getElementById('log').innerHTML = '<div class="user_close_conected">' +
-										'Пользователь:<b>' +
-										json.name + '' +
-										' :</b>покинул чат=(' +
-										'</div><br/>' + document.getElementById('log').innerHTML;
-									}
+									var date = new Date();
+									document.getElementById('log').innerHTML = '<div class="time_mes">' +
+									date.getHours() + ":" + date.getMinutes() + ":" + date.getSeconds() +
+									' </div><b>' +
+									json.name +
+									' :</b>' +
+									'<div class="mess"> ' +
+									json.message +
+									'</div><br/>' + document.getElementById('log').innerHTML;
 								}
-								document.getElementById('list_names').innerHTML ='<li class="title_names">Всего : '+json.list_names.length+'</li>';
-								for (var i = 0; i < json.list_names.length; i++) {
-									document.getElementById('list_names').innerHTML += '<li>'+json.list_names[i]+'</li>';
-								}
-								if(document.getElementById('lab_name').innerHTML=="Ваш ник: ")
-								{
-									document.getElementById('lab_name').innerHTML+= json.name;
-								}
-
-
-							} else {
-								var date = new Date();
-								document.getElementById('log').innerHTML = '<div class="time_mes">'+
-																			date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()+
-																			' </div><b>' +
-																				json.name +
-																			' :</b>' +
-																			'<div class="mess"> ' +
-																				json.message +
-																			'</div><br/>' + document.getElementById('log').innerHTML;
 							}
 						}
 						ws.onclose = function () {document.getElementById('log').innerHTML = 'WebSocket closed <br/>'+document.getElementById('log').innerHTML;}
