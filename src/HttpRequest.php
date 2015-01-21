@@ -11,7 +11,7 @@ class HttpRequest extends Generic
 			<head>
 				<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 				<style type="text/css">
-					#message_id, #message_button_id, #lab_message_id{
+					#message_id, #message_button_id, #lab_message_id, #lab_name{
 						display: none;
 					}
 					#message_id{
@@ -72,10 +72,15 @@ class HttpRequest extends Generic
 						overflow:auto;
 					}
 					.container{
+						position: fixed;
 						margin-right: auto;
-						margin-left: auto;
+						margin-left: 18%;
 						padding-left: 15px;
 						padding-right: 15px;
+						background: ivory;
+						min-height: 95%;
+						top: 3%;
+						min-width: 33%;
 					}
 					.btn{
 						overflow: visible;
@@ -108,8 +113,9 @@ class HttpRequest extends Generic
 						background-color: #184063;
 						border-color: #2431CA;
 					}
-					.mess, .user_conected, .user_close_conected{
+					.mess, .user_conected, .user_close_conected, .time_mes, .list_names{
 						display: inline;
+						font-size: 14px;
 					}
 
 					.mess{
@@ -121,19 +127,36 @@ class HttpRequest extends Generic
 					.user_close_conected{
 						color: saddlebrown;
 					}
+					.time_mes{
+						color: darkgray;
+					}
+					.list_names{
+						position: absolute;
+						top: 0%;
+						left: 105%;
+						background-color: rgb(12, 12, 12) !important;
+						overflow: auto;
+						min-height: 100%;
+						color: aliceblue;
+						min-width: 65%
+					}
+					.title_names{
+						font-size: 18px;
+						color: burlywood;
+						list-style-type: none;
+					}
 					body{
 						font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 						font-size: 14px;
 						line-height: 1.42857143;
 						color: #333;
-						background-color: #fff;
+						background: rgb(185, 186, 206);
 					}
 				</style>
 				<title>Чатик</title>
 				<script type="text/javascript">
 					function create() {
 						window.ws = new WebSocket('ws://'+document.domain+':8090/chat');
-
 						ws.onopen = function () {
 							document.getElementById('log').innerHTML = '<b>WebSocket opened</b> <br/>'+document.getElementById('log').innerHTML;
 							var message = JSON.stringify({
@@ -147,20 +170,39 @@ class HttpRequest extends Generic
 							if (json.message === undefined) {
 								if(json.close_name === undefined)
 								{
-									document.getElementById('log').innerHTML = '<div class="user_conected">' +
-																					'Пользователь:<b>' +
-																						json.name +
-																					':</b>вошел в чат...' +
-																				'</div><br/>' + document.getElementById('log').innerHTML;
+									if(json.this_name === undefined)
+									{
+										document.getElementById('log').innerHTML = '<div class="user_conected">' +
+											'Пользователь:<b>' +
+											json.name +
+											':</b>вошел в чат...' +
+										'</div><br/>' + document.getElementById('log').innerHTML;
+									}
+
 								} else {
-									document.getElementById('log').innerHTML = '<div class="user_close_conected">' +
-																					'Пользователь:<b>' +
-																						json.name + '' +
-																					' :</b>покинул чат=(' +
-																				'</div><br/>' + document.getElementById('log').innerHTML;
+									if(json.this_name === undefined) {
+										document.getElementById('log').innerHTML = '<div class="user_close_conected">' +
+										'Пользователь:<b>' +
+										json.name + '' +
+										' :</b>покинул чат=(' +
+										'</div><br/>' + document.getElementById('log').innerHTML;
+									}
 								}
+								document.getElementById('list_names').innerHTML ='<li class="title_names">Всего : '+json.list_names.length+'</li>';
+								for (var i = 0; i < json.list_names.length; i++) {
+									document.getElementById('list_names').innerHTML += '<li>'+json.list_names[i]+'</li>';
+								}
+								if(document.getElementById('lab_name').innerHTML=="Ваш ник: ")
+								{
+									document.getElementById('lab_name').innerHTML+= json.name;
+								}
+
+
 							} else {
-								document.getElementById('log').innerHTML = '<b>' +
+								var date = new Date();
+								document.getElementById('log').innerHTML = '<div class="time_mes">'+
+																			date.getHours()+":"+date.getMinutes()+":"+ date.getSeconds()+
+																			' </div><b>' +
 																				json.name +
 																			' :</b>' +
 																			'<div class="mess"> ' +
@@ -176,27 +218,29 @@ class HttpRequest extends Generic
 
 					};
 
-					function getName() {
-							var message = JSON.stringify({
-											"message":document.forms["publish"].elements["message"].value
-										});
+					function getMessage() {
+						var message = JSON.stringify({
+							"message":document.forms["publish"].elements["message"].value
+						});
 							document.forms["publish"].elements["message"].value = "";
 						    window.ws.send(message);
 					};
 
 					function showHide() {
-							var obj = document.getElementById('name_use_id');
-							obj.style.display = "none";
-							var obj = document.getElementById('name_use_button_id');
-							obj.style.display = "none";
-							var obj = document.getElementById('lab_name_use_id');
-							obj.style.display = "none";
-							var obj = document.getElementById('message_id');
-							obj.style.display = "block";
-							var obj = document.getElementById('message_button_id');
-							obj.style.display = "inline";
-							var obj = document.getElementById('lab_message_id');
-							obj.style.display = "inline";
+						var obj = document.getElementById('name_use_id');
+						obj.style.display = "none";
+						var obj = document.getElementById('name_use_button_id');
+						obj.style.display = "none";
+						var obj = document.getElementById('lab_name_use_id');
+						obj.style.display = "none";
+						var obj = document.getElementById('message_id');
+						obj.style.display = "block";
+						var obj = document.getElementById('message_button_id');
+						obj.style.display = "inline";
+						var obj = document.getElementById('lab_message_id');
+						obj.style.display = "inline";
+						var obj = document.getElementById('lab_name');
+						obj.style.display = "inline";
 
 					};
 
@@ -208,7 +252,12 @@ class HttpRequest extends Generic
 					<form name="publish" method="post" >
 					  <label id="lab_message_id">Введите текст сообщения:</label>
 					  <textarea type="text" name="message" id="message_id"></textarea>
-					  <input class="btn" type="button" onclick="getName();" value="Отправить" id="message_button_id"/>
+					  <input class="btn" type="button" onclick='
+					  if(document.forms["publish"].elements["message"].value!="")
+						{
+							getMessage();
+						}
+						' value="Отправить" id="message_button_id"/>
 					  <label id="lab_name_use_id">Введите ник:</label>
 					  <input type="text" name="name" id="name_use_id"/>
 					  <input class="btn" type="button" onclick='
@@ -219,9 +268,12 @@ class HttpRequest extends Generic
 						  create();
 						  showHide();
 					  ' value="Сохранить" id="name_use_button_id"/>
+						<label id="lab_name">Ваш ник: </label>
 					</form>
-
 					<div id="log"></div>
+					<div class="list_names">
+						<ul id ="list_names"></ul>
+					</div>
 
 				</div>
 			</body>
