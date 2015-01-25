@@ -19,10 +19,10 @@ class WebSocketRoute extends Route
 
 	public function onFrame($data, $type) {
         if($data!="mes") {
-            $data_j = (array)json_decode($data);
+            $data_j = json_decode($data,true);
             if (isset($data_j["name"])) {
-                $data_j["name"] = $this->UniqueName($data_j["name"]);
-                $data_j["list_names"] = $this->ListName();
+                $data_j["name"] = $this->uniqueName($data_j["name"]);
+                $data_j["list_names"] = $this->listName();
                 foreach ($this->appInstance->sessions as $id => $session) {
                     if ($this->id != $id) {
                         $session->client->sendFrame(json_encode($data_j), 'STRING');
@@ -42,7 +42,7 @@ class WebSocketRoute extends Route
 	}
     /// проверка на уникальность имени, в противном случае присваевает прэфикс
     //$name - имя пользователя
-    public function UniqueName($name)
+    public function uniqueName($name)
     {
         $this->name = $name;
         $count = -1;
@@ -69,8 +69,8 @@ class WebSocketRoute extends Route
 
     /// получает масив существующих пользователей
     /// $close_use / false = не включая данного пользователя
-    public function ListName($close_use=true){
-        $list_names=array();
+    public function listName($close_use=true){
+        $list_names = [];
         foreach ($this->appInstance->sessions as $id => $session) {
             if($close_use === true)//можно и без === true но так вылелуется
             {
@@ -85,7 +85,7 @@ class WebSocketRoute extends Route
 	// Этот метод срабатывает при закрытии соединения клиентом
     public function onFinish() {
         // Удаляем сессию из массива
-        $data["list_names"]=$this->ListName(false);
+        $data["list_names"]=$this->listName(false);
         foreach ($this->appInstance->sessions as $id => $session) {
             $data["name"] = $this->name.$this->prefix_name_index;
             $data["close_name"]=1;

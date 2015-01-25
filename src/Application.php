@@ -8,7 +8,7 @@ use PHPDaemon\Servers\WebSocket;
 class Application extends AppInstance
 {
 	public $requestClass = '\Chat\HttpRequest';
-    public $sessions=array();
+    public $sessions = [];
 
 	public function onReady()
 	{
