@@ -9,6 +9,7 @@ class WebSocketRoute extends Route
     public $id; // Здесь храним ID сессии
     public $name;//имя пользователя
     public $prefix_name_index;//прэфикс к имени
+    public $avatar;
 
 
 
@@ -23,6 +24,7 @@ class WebSocketRoute extends Route
             if (isset($data_j["name"])) {
                 $data_j["name"] = $this->uniqueName($data_j["name"]);
                 $data_j["list_names"] = $this->listName();
+                $this->avatar = $data_j["avatar"];
                 foreach ($this->appInstance->sessions as $id => $session) {
                     if ($this->id != $id) {
                         $session->client->sendFrame(json_encode($data_j), 'STRING');
@@ -32,6 +34,7 @@ class WebSocketRoute extends Route
                 $this->client->sendFrame(json_encode($data_j), 'STRING');
             } else {
                 $data_j["name"] = $this->name . $this->prefix_name_index;
+                $data_j["avatar"] =$this->avatar;
                 foreach ($this->appInstance->sessions as $id => $session) {
                     $session->client->sendFrame(json_encode($data_j), 'STRING');
                 }

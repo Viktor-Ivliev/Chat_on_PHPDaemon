@@ -12,13 +12,11 @@ class HttpRequest extends Generic
 			$this->header('Content-Type: text/css');
 			echo file_get_contents(__DIR__.'/../css/chat.css');
 			return;
-		} elseif ($_SERVER['REQUEST_URI'] == '/chat.js')
-		{
+		} elseif ($_SERVER['REQUEST_URI'] == '/chat.js') {
 			$this->header('Content-Type:text/javascript');
-			echo file_get_contents(__DIR__.'/../javascript/chat.js');
+			echo file_get_contents(__DIR__ . '/../javascript/chat.js');
 			return;
 		}
-
 
 
 		$this->header('Content-Type: text/html');
@@ -45,9 +43,11 @@ class HttpRequest extends Generic
 							getMessage();
 						}
 						' value="Отправить" id="message_button_id"/>
-					  <label id="lab_name_use_id">Введите ник:</label>
-					  <input type="text" name="name" id="name_use_id"/>
-					  <input class="btn" type="button" onclick='
+						<label id="lab_name_use_id">Введите ник:</label>
+						<input type="text" name="name" id="name_use_id"/>
+						<label id="lab_avatar_use_id">загрузите аватарку:</label><br/>
+						<input type="file" name="avatar" id="avatar_use_id"/>
+						<input class="btn" type="button" onclick='
 					  	  if(document.forms["publish"].elements["name"].value=="")
 					  	  {
 						  	document.forms["publish"].elements["name"].value="user";
@@ -55,7 +55,6 @@ class HttpRequest extends Generic
 						  create();
 						  showHide();
 					  ' value="Сохранить" id="name_use_button_id"/>
-						<label id="lab_name">Ваш ник: </label>
 					</form>
 					<div id="log">
 						<table id="message_log">
@@ -64,7 +63,10 @@ class HttpRequest extends Generic
 					</div>
 
 					<div class="list_names">
+						<div id="avatar_user_view"></div>
+						<div id="names_use">Ваш ник: </div>
 						<ul id ="list_names"></ul>
+
 					</div>
 
 				</div>

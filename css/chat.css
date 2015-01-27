@@ -1,4 +1,4 @@
-#message_id, #message_button_id, #lab_message_id, #lab_name{
+#message_id, #message_button_id, #lab_message_id{
     display: none;
 }
 #message_id{
@@ -156,9 +156,9 @@ table{
     color: burlywood;
     list-style-type: none;
 }
-#lab_name{
-    color: brown;
-    margin-left: 20px
+#names_use {
+    color: yellow;
+    margin-left: 5px
 }
 body{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
