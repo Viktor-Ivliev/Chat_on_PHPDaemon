@@ -45,7 +45,7 @@ class HttpRequest extends Generic
 						' value="Отправить" id="message_button_id"/>
 						<label id="lab_name_use_id">Введите ник:</label>
 						<input type="text" name="name" id="name_use_id"/>
-						<label id="lab_avatar_use_id">загрузите аватарку:</label><br/>
+						<label id="lab_avatar_use_id">загрузите аватарку не больше 40 кбт:</label><br/>
 						<input type="file" name="avatar" id="avatar_use_id"/>
 						<input class="btn" type="button" onclick='
 					  	  if(document.forms["publish"].elements["name"].value=="")
@@ -64,7 +64,7 @@ class HttpRequest extends Generic
 
 					<div class="list_names">
 						<div id="avatar_user_view"></div>
-						<div id="names_use">Ваш ник: </div>
+						<div id="names_use"></div>
 						<ul id ="list_names"></ul>
 
 					</div>

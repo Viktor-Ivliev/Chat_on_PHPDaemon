@@ -1,6 +1,6 @@
 onload = function () {
     // вешаем обработчик события, срабатывающий при изменении avatar
-    document.getElementById('avatar_use_id').addEventListener('change', onFilesSelect, true);
+    document.getElementById('avatar_use_id').addEventListener('change', onFilesSelect, false);
 }
 
 var avatar = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwwSEhIQEBAQEhQVEhQYFRYVDRUVFRcWFxQZIhUd" +
@@ -22,15 +22,25 @@ function onFilesSelect(e){
     fr;
     // Если в файле содержится изображение
     if (/image.*/.test(file.type)) {
-        fr = new FileReader();
-        // считываем его в строку base64
-        fr.readAsDataURL(file);
-        // как только файл загружен
-        fr.onload = (function (file) {
-            return function (e) {
-                avatar = e.target.result;
-            }
-        })(file);
+
+        if (file.size < 40000) {
+            document.getElementById('lab_avatar_use_id').innerHTML = "one"+file.size;
+            fr = new FileReader();
+            // считываем его в строку base64
+            fr.readAsDataURL(file);
+            // как только файл загружен
+            document.getElementById('lab_avatar_use_id').innerHTML = "Изображение загружено успешно!";
+            fr.onload = (function (file) {
+                return function (e) {
+                    avatar = e.target.result;
+                }
+            })(file);
+        } else {
+            document.getElementById('lab_avatar_use_id').innerHTML = "two"+file.size;
+
+
+            document.getElementById('lab_avatar_use_id').innerHTML = "<>Изображение больше 40 кбт, выберете иное";
+        }
     }
 }
 
@@ -42,7 +52,6 @@ function onFilesSelect(e){
         var message = JSON.stringify({
             "name":document.forms["publish"].elements["name"].value,
             "avatar":avatar
-
         });
         setInterval('ws.send("mes")', 2*58*1000);
         ws.send(message);
